@@ -6,4 +6,4 @@
 https://sutara79.github.io/demo-octicons/
 
 ## 解説記事
-https://qiita.com/sutara79/3898a3fe2264a19ce16e/
+https://qiita.com/sutara79/items/3898a3fe2264a19ce16e
