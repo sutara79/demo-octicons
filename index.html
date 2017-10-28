@@ -32,7 +32,19 @@
       .octicon-zap {
         height: 3em;
       }
+      .shadow-text {
+        display: inline-block;
+        font-size: 3em;
+        text-shadow: 2px 2px 2px red;
+      }
+      .shadow-box {
+        font-size: 3em;
+        display: inline-block;
+        box-shadow: 2px 2px 2px red;
+      }
     </style>
+    <!-- DO NOT use the url below for the other website -->
+    <script src="https://use.fontawesome.com/ca61183851.js"></script>
   </head>
   <body>
     <h1>素のHTMLでのOcticonsの使い方</h1>
@@ -90,5 +102,29 @@
         }
       });
     </script>
+    <hr>
+    <p>
+      欠点の一つに、text-shadowを使えないという点があります。<br>
+      たとえば、<a href="http://fontawesome.io/">FontAwesome</a>ならば下記のように影をつけられます。<br>
+      <span class="shadow-text">
+        通常のテキスト
+        <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+      </span>
+    </p>
+    <p>
+      しかし、Octiconsでは不可能です。<br>
+      下記でもtext-shadowを使っていますが、SVGなので全く反映されません。<br>
+      <span class="shadow-text">
+        通常のテキスト
+        <svg class="octicon octicon-thumbsup" viewBox="0 0 16 16" version="1.1" aria-hidden="true"><path fill-rule="evenodd" d="M14 14c-.05.69-1.27 1-2 1H5.67L4 14V8c1.36 0 2.11-.75 3.13-1.88 1.23-1.36 1.14-2.56.88-4.13-.08-.5.5-1 1-1 .83 0 2 2.73 2 4l-.02 1.03c0 .69.33.97 1.02.97h2c.63 0 .98.36 1 1l-1 6L14 14zm0-8h-2.02l.02-.98C12 3.72 10.83 0 9 0c-.58 0-1.17.3-1.56.77-.36.41-.5.91-.42 1.41.25 1.48.28 2.28-.63 3.28-1 1.09-1.48 1.55-2.39 1.55H2C.94 7 0 7.94 0 9v4c0 1.06.94 2 2 2h1.72l1.44.86c.16.09.33.14.52.14h6.33c1.13 0 2.84-.5 3-1.88l.98-5.95c.02-.08.02-.14.02-.2-.03-1.17-.84-1.97-2-1.97H14z"></path></svg>
+      </span>
+    </p>
+    <p>
+      box-shadowでは長方形の画像の領域に沿った影しかつけられません。<br>
+      <span class="shadow-box">通常のテキスト</span>
+      <span class="shadow-box">
+        <svg class="octicon octicon-thumbsup" viewBox="0 0 16 16" version="1.1" aria-hidden="true"><path fill-rule="evenodd" d="M14 14c-.05.69-1.27 1-2 1H5.67L4 14V8c1.36 0 2.11-.75 3.13-1.88 1.23-1.36 1.14-2.56.88-4.13-.08-.5.5-1 1-1 .83 0 2 2.73 2 4l-.02 1.03c0 .69.33.97 1.02.97h2c.63 0 .98.36 1 1l-1 6L14 14zm0-8h-2.02l.02-.98C12 3.72 10.83 0 9 0c-.58 0-1.17.3-1.56.77-.36.41-.5.91-.42 1.41.25 1.48.28 2.28-.63 3.28-1 1.09-1.48 1.55-2.39 1.55H2C.94 7 0 7.94 0 9v4c0 1.06.94 2 2 2h1.72l1.44.86c.16.09.33.14.52.14h6.33c1.13 0 2.84-.5 3-1.88l.98-5.95c.02-.08.02-.14.02-.2-.03-1.17-.84-1.97-2-1.97H14z"></path></svg>
+      </span>
+    </p>
   </body>
 </html>
